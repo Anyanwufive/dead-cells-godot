@@ -12,11 +12,23 @@ _global_script_classes=[{
 "class": &"Enemy",
 "language": &"GDScript",
 "path": "res://src/enemies/enemy.gd"
+}, {
+"base": "Node",
+"class": &"TouchInputManager",
+"language": &"GDScript",
+"path": "res://src/managers/touch_input_manager.gd"
+}, {
+"base": "Node",
+"class": &"MobileDetector",
+"language": &"GDScript",
+"path": "res://src/managers/mobile_detector.gd"
 }]
 
 _global_script_class_icons={
 "Enemy": "",
-"Player": ""
+"MobileDetector": "",
+"Player": "",
+"TouchInputManager": ""
 }
 
 [application]
@@ -55,7 +67,16 @@ dash={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"keycode":69)]
 }
+pause={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"keycode":4194305)]
+}
 
 [physics]
 
 2d/default_gravity=980
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true
+renderer/rendering_method=mobile
