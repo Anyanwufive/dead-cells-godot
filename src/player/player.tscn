@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6ny46xj1i1if"]
+
+[ext_resource type="Script" path="res://src/player/player.gd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(32, 64)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_j5puo")
+speed = 300.0
+jump_force = -400.0
+acceleration = 1500.0
+friction = 1200.0
+gravity = 980.0
+max_health = 100.0
+dash_cooldown = 1.0
+dash_speed = 500.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0.5, 1, 1)
+scale = Vector2(2, 2)

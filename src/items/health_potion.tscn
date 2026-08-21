@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2hllygh5ujn1"]
+
+[ext_resource type="Script" path="res://src/items/health_potion.gd"]
+
+[node name="HealthPotion" type="Area2D"]
+script = ExtResource("1_1kjsh")
+heal_amount = 25.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 1, 0, 1)
+scale = Vector2(1.5, 1.5)

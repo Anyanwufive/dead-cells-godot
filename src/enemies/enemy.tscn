@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dq7lc1wpl7hxu"]
+
+[ext_resource type="Script" path="res://src/enemies/enemy.gd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2"]
+size = Vector2(32, 32)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_9cx5d")
+max_health = 30.0
+speed = 150.0
+detection_range = 300.0
+attack_range = 50.0
+damage = 5.0
+gravity = 980.0
+knockback_force = 150.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(2, 2)
