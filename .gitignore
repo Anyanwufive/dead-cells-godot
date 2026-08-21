@@ -1,0 +1,18 @@
+# Godot 4+ specific ignores
+.godot/
+*.import
+*.translation
+export_presets.cfg
+*.lock
+
+# OS specific
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
